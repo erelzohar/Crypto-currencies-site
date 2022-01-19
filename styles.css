@@ -3,6 +3,7 @@ html {
     margin: 0;
     width: 100%;
     height: 100%;
+    /* overflow-x: hidden; */
 }
 
 body {
@@ -14,13 +15,18 @@ body {
     height: 100%;
 }
 
+#container h1,h2{
+    text-align:justify;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+}
 .header>h1 {
+    font-size: 70px;
     padding: 0;
     margin: 0;
-    position: relative;
-    left: 5%;
-    top: 20%;
-    font-size: 70px;
+    /* position: relative; */
+    left: 5vw;
+    top: 5vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #fff;
 }
@@ -28,20 +34,19 @@ body {
 .header {
     margin: 0;
     padding: 0;
-    height: 180px;
+    height: 50vh;
     width: 100%;
 }
 
 #tunaFish {
     position: absolute;
-    right: 20px;
-    top: 35px;
+    right: 5%;
+    top: 6%;
     width: 120px;
     height: 120px;
 }
 
 .row {
-    top: 100px;
     background-color: rgb(27, 22, 36);
     margin: 20px;
     padding: 5px;
@@ -49,18 +54,8 @@ body {
     border-radius: 7px;
 }
 
-.card-title {
-    width: fit-content;
-}
-
-.card-text,
-.card {
-    width: max-content;
-}
-
 .card>img {
     position: relative;
-    ;
     left: 200%;
     bottom: 30px;
     height: 70px;
@@ -71,7 +66,7 @@ body {
     margin: 0;
     padding: 0;
     position: relative;
-    width: 120%;
+    width: 100%;
     height: 150px;
     top: 60px;
     right: 20px;
@@ -81,18 +76,18 @@ body {
     filter: brightness(80%);
 }
 
-#searchSpan {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    display: flex;
+#searchDiv{
+    margin: 3px;
+    padding: 10px;
     border-radius: 7px;
+    width: 100%;
 }
 
 #searchBox {
     height: 40px;
     border-radius: 5px;
     bottom: 2px;
+    width: max-content;
 }
 
 .nav>li {
@@ -114,9 +109,6 @@ ul>.col-xs-10 {
     width: 50px;
     position: relative;
 }
-#container>img{
-    top: 100px;
-}
 
 .form-check-input{
     height: 20px;
@@ -135,17 +127,15 @@ h3{
     position: absolute;
     top: 70%;
 }
-#myImage{
-    padding: 30px;
-    margin-bottom: 30px;
-    display: inline-block;
-    max-inline-size: 400px;
-    max-height: 400px;
-    position: relative;
-    left: 50%;
-}
+
 .modal-body{
     padding: 0;
     margin: 0;
     min-height: 500px;
+}
+
+#noReportsText{
+    position: absolute;
+    top: 60vh;
+    text-align: center;
 }
