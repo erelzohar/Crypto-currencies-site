@@ -18,7 +18,7 @@ $(() => {
     const searchArray = [];
 
     //get Ajax json and append to container.
-    $(async () => {
+    $(async() => {
 
         $("#container").html(`<img id="loadingGif" src="assets/images/loading.gif">`);
 
@@ -64,14 +64,14 @@ $(() => {
             $("#searchBox").autocomplete({
                 source: searchArray
             }, {});
-            
+
             //reports page build
             $("#pills-profile-tab").click(() => {
                 $("#searchBox").val("");
                 let reportsHtml = null;
                 if (localStorage.getItem("reportsArray") !== null && JSON.parse(localStorage.getItem("reportsArray")).length !== 0) {
                     console.log(JSON.parse(localStorage.getItem("reportsArray")).length);
-                    console.log(localStorage.getItem("reportsArray") );
+                    console.log(localStorage.getItem("reportsArray"));
                     const reportsArray = JSON.parse(localStorage.getItem("reportsArray"));
                     reportsArray.forEach(element => reportsHtml += cardBuilder(element.id, coinListArray));
                     $("#container").html(reportsHtml);
@@ -80,13 +80,13 @@ $(() => {
                     addAndDeleteFromReport(coinListArray);
                     return;
                 }
-                    $("#container").html(`<h1 id="noReportsText">You haven't added any coin to your reports.</h1>`);
+                $("#container").html(`<h1 class="col-xs-12" id="noReportsText">You haven't added any coin to your reports.</h1>`);
             });
             //about us page build
             $("#pills-contact-tab").click(() => {
                 $("#searchBox").val("");
                 $("#container").html(
-                    `<h2 class="col-xs-10" id="aboutText">
+                    `<h2 class="col-xs-12" id="aboutText">
                         Name : Erel Zohar <br>
                         Titles: <br>
                         Director and owner at Cryptuna,<br>
@@ -97,8 +97,7 @@ $(() => {
                 );
             });
 
-        }
-        catch (err) { alert("Error : " + err.message); }
+        } catch (err) { alert("Error : " + err.message); }
     })
 
 });

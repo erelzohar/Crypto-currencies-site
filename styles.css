@@ -3,7 +3,6 @@ html {
     margin: 0;
     width: 100%;
     height: 100%;
-    /* overflow-x: hidden; */
 }
 
 body {
@@ -15,18 +14,19 @@ body {
     height: 100%;
 }
 
-#container h1,h2{
-    text-align:justify;
+#container>h1,
+h2 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #fff;
 }
+
 .header>h1 {
+    display: flex;
     font-size: 70px;
-    padding: 0;
-    margin: 0;
-    /* position: relative; */
+    position: relative;
     left: 5vw;
     top: 5vh;
+    max-width: fit-content;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #fff;
 }
@@ -41,7 +41,7 @@ body {
 #tunaFish {
     position: absolute;
     right: 5%;
-    top: 6%;
+    top: 10%;
     width: 120px;
     height: 120px;
 }
@@ -55,9 +55,9 @@ body {
 }
 
 .card>img {
-    position: relative;
-    left: 200%;
-    bottom: 30px;
+    position: absolute;
+    right: 5%;
+    top: 50%;
     height: 70px;
     width: 70px;
 }
@@ -67,31 +67,30 @@ body {
     padding: 0;
     position: relative;
     width: 100%;
-    height: 150px;
-    top: 60px;
-    right: 20px;
-    border-bottom: #255 10px inset ;
+    height: 40%;
+    top: 10%;
+    border-bottom: #255 10px inset;
     border-radius: 0px 60px 7px 7px;
     background-color: transparent;
     filter: brightness(80%);
 }
 
-#searchDiv{
+#searchDiv {
     margin: 3px;
-    padding: 10px;
+    padding: auto;
     border-radius: 7px;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 #searchBox {
-    height: 40px;
+    height: 5vh;
     border-radius: 5px;
-    bottom: 2px;
-    width: max-content;
+    width: 50%;
 }
 
 .nav>li {
-    top: 10px;
     background-color: #255;
     border-radius: 5px;
     margin: 10px;
@@ -101,8 +100,9 @@ body {
 ul>.col-xs-10 {
     background-color: transparent;
 }
-#loadingGif{
-    display:inline-block;
+
+#loadingGif {
+    display: inline-block;
     margin: 20px;
     padding: 0;
     height: 50px;
@@ -110,17 +110,19 @@ ul>.col-xs-10 {
     position: relative;
 }
 
-.form-check-input{
+.form-check-input {
     height: 20px;
     width: 20px;
 }
-.form-check-label{
+
+.form-check-label {
     box-shadow: 3px 3px 5px black;
     border-radius: 5px;
     font-size: medium;
     color: rgb(8, 153, 211);
 }
-h3{
+
+h3 {
     margin: 30px;
     color: #fff;
     max-width: 500px;
@@ -128,14 +130,8 @@ h3{
     top: 70%;
 }
 
-.modal-body{
+.modal-body {
     padding: 0;
     margin: 0;
     min-height: 500px;
-}
-
-#noReportsText{
-    position: absolute;
-    top: 60vh;
-    text-align: center;
 }
